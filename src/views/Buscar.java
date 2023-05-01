@@ -581,9 +581,10 @@ private void deletarHospede() {
 		
 		if(coluna == 0 && linha > -1 ) {
 			
-			Object objetoDaLinha = (Object) modelo.getValueAt(tbHospedes.getSelectedRow(), tbHospedes.getSelectedColumn());
+			Object objetoDaLinha = (Object) modeloHospedes.getValueAt(tbHospedes.getSelectedRow(), tbHospedes.getSelectedColumn());
 
 			Integer id = (Integer) objetoDaLinha;
+			
 			this.hospedeController.deletar(id);
 			modeloHospedes.removeRow(tbHospedes.getSelectedRow());
 			JOptionPane.showMessageDialog(this, "Item removido com sucesso!");
